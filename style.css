@@ -1,0 +1,55 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+div, span {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "黑体", sans-serif;
+}
+#topbar {
+  height: 54px;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  min-width: 800px;
+}
+#topbar img[logo] {
+  height: 32px;
+  width: 32px;
+  padding-left: 60px;
+  padding-top: 10px;
+}
+#topbar span, #topbar div {
+  line-height: 54px;
+  height: 54px;
+}
+#topbar span[title] {
+  padding-left: 10px;
+  font-size: 20px;
+}
+div[fill] {
+  -webkit-flex: 1;
+  flex: 1;
+}
+#topbar div[tab] {
+  font-size: 14px;
+  padding: 0 20px;
+}
+#topbar div[selected] {
+  color: #ec0000;
+  border-bottom: thick solid #ec0000;
+}
+#topbar div[login] {
+  color: #ec0000;
+  padding: 0 20px;
+  margin-right: 50px;
+}
+#topbar div[login] img {
+  height: 17px;
+  width: 14px;
+  padding-right: 2px;
+  position: relative;
+  top: 2px;
+}
