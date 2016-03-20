@@ -331,6 +331,13 @@ div.flexbox {
   color: white;
   letter-spacing: 20px;
   text-indent: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: all ease .3s;
+}
+#part-4 div.select-area div.button:hover {
+  background: #c33;
 }
 #part-5 {
   height: 580px;
@@ -465,6 +472,13 @@ div.flexbox {
   padding: 7px 23px;
   color: #c00;
   border: 2px solid #c00;
+  cursor: pointer;
+  background: white;
+  transition: all ease .3s;
+}
+#part-6 > div.content > .button:hover {
+  color: #fff;
+  background: #c00;
 }
 #part-6 > div.content > .tab {
   margin-top: 30px;
@@ -520,7 +534,16 @@ div.flexbox {
 }
 #part-7 > div.text > div.button {
   padding: 10px 30px;
-  border: 1px solid #000;
+  border: 1px solid #c00;
+  color: #c00;
+  background: white;
+  transition: all ease .3s;
+  cursor: pointer;
+}
+#part-7 > div.text > div.button:hover {
+  background: #f55;
+  border: 1px solid #f55;
+  color: white;
 }
 #part-7 > div.text.red {
   background: #f55;
@@ -530,7 +553,14 @@ div.flexbox {
   border-bottom: 2px solid #fff;
 }
 #part-7 > div.text.red > div.button {
+  background: #f55;
   border: 1px solid white;
+  color: white;
+}
+#part-7 > div.text.red > div.button:hover {
+  background: white;
+  border: 1px solid white;
+  color: #f55;
 }
 #part-7 > div.text > span {
   display: block;
@@ -605,6 +635,10 @@ div.flexbox {
 #part-8 > .form > .left > div {
   position: relative;
   padding-bottom: 20px;
+  cursor: pointer;
+}
+#part-8 > .form > .left > div > * {
+  cursor: pointer;
 }
 #part-8 > .form > .left > div > .title {
   display: block;
@@ -661,6 +695,9 @@ div.flexbox {
   padding: 10px;
   background: #eee;
   text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #bottombar {
   height: 600px;
@@ -706,7 +743,6 @@ div.flexbox {
   color: white;
   border: none;
 }
-
 #bottombar > .content > .social {
   margin-top: 40px;
   width: 300px;
