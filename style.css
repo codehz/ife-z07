@@ -405,6 +405,7 @@ div.flexbox {
 #part-6 > .img::after {
   position: absolute;
   top: 50%;
+  margin-top: -10px;
   right: 0;
   content: '';
   width: 0;
@@ -479,4 +480,88 @@ div.flexbox {
 }
 #part-6 > div.content > .tab > div[actived] {
   background: #aaa;
+}
+#part-7 {
+  display: -webkit-flex;
+  display: flex;
+}
+#part-7 > div {
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 600px;
+}
+#part-7 > div.text > span {
+  font-size: 20px;
+}
+#part-7 > div.text > span.subtitle {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+#part-7 > div.text > span.subtitle::after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  content: '';
+  margin-left: -20px;
+  width: 40px;
+  border-bottom: 2px solid #000;
+  transition: all ease .5s;
+}
+#part-7 > div.text:hover > span.subtitle::after {
+  margin-left: -40px;
+  width: 80px;
+}
+#part-7 > div.text > div.button {
+  padding: 10px 30px;
+  border: 1px solid #000;
+}
+#part-7 > div.text.red {
+  background: #f55;
+  color: white;
+}
+#part-7 > div.text.red > span.subtitle::after {
+  border-bottom: 2px solid #fff;
+}
+#part-7 > div.text.red > div.button {
+  border: 1px solid white;
+}
+#part-7 > div.text > span {
+  display: block;
+}
+#part-7 > div.img {
+  position: relative;
+}
+#part-7 > div.img::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background: url(image/img03.jpg) right center no-repeat;
+  background-size: cover;
+  -webkit-filter: brightness(0.8);
+  -moz-filter: brightness(0.8);
+  -o-filter: brightness(0.8);
+  -ms-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+#part-7 > div.img::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #ffffff;
 }
