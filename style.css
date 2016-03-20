@@ -147,7 +147,7 @@ div.flexbox {
   top: 0px;
   width: 100%;
   height: 100%;
-  background: url(image/img01.png);
+  background: url(image/img01.jpg);
   background-size: cover;
   -webkit-filter: brightness(0.8);
   -moz-filter: brightness(0.8);
@@ -244,7 +244,7 @@ div.flexbox {
   top: 0px;
   width: 100%;
   height: 100%;
-  background: url(image/bg_map.png);
+  background: url(image/bg_map.jpg);
   background-size: cover;
   -webkit-filter: brightness(0.8);
   -moz-filter: brightness(0.8);
@@ -341,14 +341,14 @@ div.flexbox {
 #part-5 > div > .text {
   line-height: 24px;
 }
-#part-5 > div > .text  > span.title {
+#part-5 > div > .text > span.title {
   display: block;
   font-size: 14px;
   text-align: center;
 }
-#part-5 > div.highlight > .text  > span.title {
+#part-5 > div.highlight > .text > span.title {
   text-indent: 30px;
-  letter-spacing:30px;
+  letter-spacing: 30px;
   font-size: 20px;
 }
 #part-5 > div > .text > span.description {
@@ -356,4 +356,104 @@ div.flexbox {
   font-size: 12px;
   text-align: center;
   color: #666;
+}
+#part-6 {
+  height: 40vmax;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+#part-6 > .img {
+  position: relative;
+  flex: 2;
+  background: url(image/img02.jpg);
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: white;
+}
+#part-6 > .img::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+#part-6 > .img > .title {
+  font-size: 48px;
+}
+#part-6 > .img > .subtitle {
+  font-size: 128px;
+  line-height: 100px;
+}
+#part-6 > .img > .description {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 42px;
+  font-size: 24px;
+}
+#part-6 > div.content {
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#part-6 > div.content > .title {
+  display: block;
+  font-size: 24px;
+}
+#part-6 > div.content > .title::after {
+  content: attr(data-num);
+  background: url(image/sep.png) left no-repeat;
+  padding-left: 24px;
+  line-height: 92px;
+  color: red;
+  font-weight: bold;
+}
+#part-6 > div.content > .description {
+  display: block;
+  width: 64%;
+  text-align: justify;
+  line-height: 36px;
+  color: #ccc;
+  font-size: 13px;
+  font-family: "楷体", serif;
+}
+#part-6 > div.content > .button {
+  box-sizing: border-box;
+  margin-top: 50px;
+  font-size: 14px;
+  padding: 7px 23px;
+  color: #c00;
+  border: 2px solid #c00;
+}
+#part-6 > div.content > .tab {
+  margin-top: 30px;
+}
+#part-6 > div.content > .tab > div {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 10px;
+  border-radius: 12px;
+  border: 2px solid #aaa;
+  background: #fff;
+}
+#part-6 > div.content > .tab > div[actived] {
+  background: #aaa;
 }
