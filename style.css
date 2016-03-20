@@ -3,7 +3,7 @@ body, html {
   margin: 0;
 }
 body {
-  min-width: 800px;
+  min-width: 1280px;
 }
 div, span {
   box-sizing: border-box;
@@ -306,6 +306,54 @@ div.flexbox {
   text-align: center;
   line-height: 36px;
   color: white;
-  letter-spacing:20px;
+  letter-spacing: 20px;
   text-indent: 20px;
+}
+#part-5 {
+  height: 580px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 0 calc(50% - 500px);
+  background: #eee;
+}
+#part-5 > div {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#part-5 > div.highlight {
+  flex-direction: column-reverse;
+}
+#part-5 > div > img {
+  padding: 10px;
+  background: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  margin: 5px 0;
+}
+#part-5 > div > .text {
+  line-height: 24px;
+}
+#part-5 > div > .text  > span.title {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+#part-5 > div.highlight > .text  > span.title {
+  text-indent: 30px;
+  letter-spacing:30px;
+  font-size: 20px;
+}
+#part-5 > div > .text > span.description {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  color: #666;
 }
