@@ -135,7 +135,7 @@ div.flexbox {
 }
 #part-1 {
   position: relative;
-  height: calc(100vh - 54px);
+  height: calc(100vmin - 54px);
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -185,6 +185,27 @@ div.flexbox {
 }
 #part-1 div.button:hover {
   background-color: #de5f5f;
+}
+@media (min-width: 2400px) {
+  #part-1 {
+    position: fixed;
+    width: 100%;
+    z-index: -2;
+    top: 0;
+  }
+  #part-1+div {
+    margin-left: 800px;
+    margin-top: 100vh;
+    background: white;
+  }
+}
+@media (min-width: 2800px) {
+  #part-1+div {
+    margin-left: 800px;
+    width: 2000px;
+    margin-top: 100vh;
+    background: white;
+  }
 }
 #part-2 {
   height: 260px;
@@ -251,7 +272,7 @@ div.flexbox {
   -o-filter: brightness(0.8);
   -ms-filter: brightness(0.8);
   filter: brightness(0.8);
-  z-index: -1;
+  z-index: 0;
 }
 #part-4 div.background:before {
   content: "";
@@ -265,6 +286,7 @@ div.flexbox {
 }
 #part-4 div.content {
   color: white;
+  z-index: 1;
 }
 #part-4 div.content span.title {
   font-size: 26px;
@@ -294,6 +316,7 @@ div.flexbox {
   display: flex;
   -webkit-justify-content: space-around;
   justify-content: space-around;
+  z-index: 1;
 }
 #part-4 div.select-area > div {
   flex: 1 1;
@@ -358,7 +381,7 @@ div.flexbox {
   color: #666;
 }
 #part-6 {
-  height: 40vmax;
+  height: 600px;
   margin: 0 auto;
   display: -webkit-flex;
   display: flex;
