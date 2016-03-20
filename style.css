@@ -3,7 +3,7 @@ body, html {
   margin: 0;
 }
 body {
-  min-width: 1280px;
+  min-width: 1024px;
 }
 div, span {
   box-sizing: border-box;
@@ -349,6 +349,11 @@ div.flexbox {
   align-items: center;
   padding: 0 calc(10% + 20px);
   background: #eee;
+}
+@media (max-width: 1300px) {
+  #part-5 {
+    padding: 0 50px;
+  }
 }
 #part-5 > div {
   display: -webkit-flex;
