@@ -1,20 +1,92 @@
 <!DOCTYPE HTML>
 <html lang="zh">
+
 <head>
   <title>新世界</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div id="topbar">
-    <img logo src="image/books.png" />
-    <span title>新世界</span>
-    <div fill></div>
-    <div tab selected>首页</div>
-    <div tab>最新活动</div>
-    <div tab>项目介绍</div>
-    <div tab>爱心社区</div>
-    <div tab>关于我们</div>
-    <div login><img src="image/login.png">登录</div>
+    <img class="logo" src="image/books.png" />
+    <span class="title">新世界</span>
+    <div class="fill"></div>
+    <div class="tab selected">首页</div>
+    <div class="tab">最新活动</div>
+    <div class="tab">项目介绍</div>
+    <div class="tab">爱心社区</div>
+    <div class="tab">关于我们</div>
+    <div class="login"><img src="image/login.png">登录</div>
+  </div>
+  <div id="part-1" class="noselect">
+    <div class="background"></div>
+    <div class="content">
+      <span class="title">Time of new life</span>
+      <div class="text">
+        新时代年轻的人们让我们一起
+        <br> 体验新生活，享受新生活
+      </div>
+      <div class="button">开始体验</div>
+    </div>
+  </div>
+  <div id="part-2" class="noselect">
+    <ul>
+      <li>
+        <img src="image/icon0.png" />
+        <span>打造全新世界观，让你更爱你的生活</span>
+      </li>
+      <li>
+        <img src="image/icon1.png" />
+        <span>丰富多彩的公益活动，发挥新世界的主人公意识</span>
+      </li>
+      <li>
+        <img src="image/icon2.png" />
+        <span>时尚的新理念，超前体验未知的生活</span>
+      </li>
+      <li>
+        <img src="image/icon3.png" />
+        <span>完善的培养机制，培养你全新的世界观</span>
+      </li>
+    </ul>
+  </div>
+  <div id="part-3" class="flexbox noselect">
+    <img src="image/books.png">
+    <span>关于新世界，你不知道的还有什么？</span>
+  </div>
+  <div id="part-4" class="flexbox">
+    <div class="background"></div>
+    <div class="content flexbox noselect">
+      <span class="title">查找新世界城市活动信息</span>
+      <spam class="description">每个城市都有不同的活动信息，请自主查询你所需要了解的城市</span>
+    </div>
+    <div class="select-area">
+      <div class="select" selected="中国" tabindex="0">
+        <div class="option">
+          <div>中国</div>
+          <div>其他国家</div>
+        </div>
+      </div>
+      <div class="select" selected="省份" tabindex="0">
+        <div class="option">
+          <div selected>北京市</div>
+          <div>天津市</div>
+          <div>河北省</div>
+          <div>陕西省</div>
+          <div>内蒙古自治区</div>
+          <div>辽宁省</div>
+        </div>
+      </div>
+      <div class="select" selected="城市" tabindex="0">
+        <div class="option">
+          <div>需要JavaScript才可以显示</div>
+          <div>所以现在留空吧</div>
+        </div>
+      </div>
+      <div class="button">
+        搜索
+      </div>
+    </div>
   </div>
 </body>
+
 </html>

@@ -2,20 +2,100 @@ body, html {
   padding: 0;
   margin: 0;
 }
+body {
+  min-width: 800px;
+}
 div, span {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: "黑体", sans-serif;
+  font-family: "微软雅黑", sans-serif;
+}
+div.fill {
+  -webkit-flex: 1;
+  flex: 1;
+}
+div.flexbox {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.select {
+  background: url(image/dropdown.png) center right 10px no-repeat, #fff;
+  position: relative;
+  -webkit-appearance: none;
+  height: 36px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border: white solid 2px;
+  cursor: pointer;
+}
+.select::before {
+  content: attr(selected);
+  line-height: 32px;
+  color: #aaa;
+}
+.select > div.option {
+  display: none;
+}
+.select:focus {
+  outline: none;
+  border: #c00 solid 2px;
+}
+.select:focus > div.option {
+  display: block;
+  position: absolute;
+  top: 32px;
+  left: -2px;
+  right: -2px;
+  background: white;
+  border: #c00 solid 2px;
+  box-sizing: border-box;
+  background: #ddd;
+  z-index: 2;
+  cursor: pointer;
+}
+.select:focus > div.option > div {
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.select:focus > div.option > div:last-of-type {
+  padding-bottom: 15px;
+}
+.select:focus > div.option > div[selected] {
+  background: url(image/selected.png) left 10px center no-repeat, #c00;
+  color: white;
+}
+.select:focus > div.option > div:hover {
+  background: #c00;
+  color: white;
+}
+.noselect * {
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #topbar {
+  position: fixed;
+  top: 0;
+  background: white;
   height: 54px;
   width: 100%;
   display: -webkit-flex;
   display: flex;
   min-width: 800px;
+  z-index: 5;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
-#topbar img[logo] {
+#topbar+div {
+  margin-top: 54px;
+}
+#topbar img.logo {
   height: 32px;
   width: 32px;
   padding-left: 60px;
@@ -25,31 +105,207 @@ div, span {
   line-height: 54px;
   height: 54px;
 }
-#topbar span[title] {
+#topbar span.title {
   padding-left: 10px;
   font-size: 20px;
 }
-div[fill] {
-  -webkit-flex: 1;
-  flex: 1;
-}
-#topbar div[tab] {
+#topbar div.tab {
   font-size: 14px;
   padding: 0 20px;
+  color: #999;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-bottom: 0px solid #ec0000;
 }
-#topbar div[selected] {
+#topbar div.selected, #topbar div.tab:hover {
   color: #ec0000;
-  border-bottom: thick solid #ec0000;
+  border-bottom: 5px solid #ec0000;
 }
-#topbar div[login] {
+#topbar div.login {
   color: #ec0000;
   padding: 0 20px;
   margin-right: 50px;
 }
-#topbar div[login] img {
+#topbar div.login img {
   height: 17px;
   width: 14px;
   padding-right: 2px;
   position: relative;
   top: 2px;
+}
+#part-1 {
+  position: relative;
+  height: calc(100vh - 54px);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+#part-1 div.background {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(image/img01.png);
+  background-size: cover;
+  -webkit-filter: brightness(0.8);
+  -moz-filter: brightness(0.8);
+  -o-filter: brightness(0.8);
+  -ms-filter: brightness(0.8);
+  filter: brightness(0.8);
+  z-index: -1;
+}
+#part-1 div.content {
+  padding-left: 120px;
+}
+#part-1 div.content * {
+  margin: 20px 0;
+}
+#part-1 div.content span.title {
+  font-size: 60px;
+  color: white;
+}
+#part-1 div.content div.text {
+  color: white;
+  font-size: 24px;
+  line-height: 36px;
+}
+#part-1 div.button {
+  width: 340px;
+  height: 60px;
+  margin-top: 80px;
+  background-color: #de3f3f;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#part-1 div.button:hover {
+  background-color: #de5f5f;
+}
+#part-2 {
+  height: 260px;
+}
+#part-2 ul {
+  padding: 0;
+  margin: 0;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}
+#part-2 li {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+  color: #8c8c8c;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#part-2 li:not(:first-child) span {
+  border-left: solid 1px;
+}
+#part-2 li span {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 20%;
+  height: 3em;
+  text-align: center;
+  font-family: "SimHei", sans-serif;
+}
+#part-3 {
+  height: 380px;
+  background-color: #dfdfdf;
+}
+#part-3 img {
+  width: 91px;
+}
+#part-3 span {
+  margin-top: 40px;
+  color: #8c8c8c;
+  font-size: 56px;
+}
+#part-4 {
+  position: relative;
+  height: 380px;
+}
+#part-4 div.background {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(image/bg_map.png);
+  background-size: cover;
+  -webkit-filter: brightness(0.8);
+  -moz-filter: brightness(0.8);
+  -o-filter: brightness(0.8);
+  -ms-filter: brightness(0.8);
+  filter: brightness(0.8);
+  z-index: -1;
+}
+#part-4 div.background:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.1);
+}
+#part-4 div.content {
+  color: white;
+}
+#part-4 div.content span.title {
+  font-size: 26px;
+  padding-bottom: 10px;
+  position: relative;
+}
+#part-4 div.content span.title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  left: 50%;
+  margin-left: -30px;
+  border-bottom: solid 3px;
+}
+#part-4 div.content spam.description {
+  margin-top: 20px;
+}
+#part-4 div.select-area {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 2000px;
+  padding: 0 100px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+#part-4 div.select-area > div {
+  flex: 1 1;
+  margin: 0 20px;
+  max-width: 300px;
+  height: 36px;
+}
+#part-4 div.select-area div.button {
+  background: #c00;
+  text-align: center;
+  line-height: 36px;
+  color: white;
+  letter-spacing:20px;
+  text-indent: 20px;
 }
