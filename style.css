@@ -403,7 +403,7 @@ div.flexbox {
 #part-6 > .img {
   position: relative;
   flex: 2;
-  background: url(image/img02.jpg);
+  background: url(image/img02.jpg) bottom center no-repeat;
   background-size: cover;
   display: -webkit-flex;
   display: flex;
@@ -673,22 +673,52 @@ div.flexbox {
   flex: 2;
   margin-left: 50px;
 }
-#part-8 > .form > .right > input {
+#part-8 > .form > .right > div[data-label] > input {
   display: inline;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 10px;
+  text-indent: 80px;
+}
+#part-8 > .form > .right > div[data-label] {
+  display: inline-block;
   width: calc(50% - 20px);
   box-sizing: border-box;
   margin: 5px;
-  padding: 10px;
-  border: none;
+  padding 0;
   background: #eee;
+  position: relative;
 }
-#part-8 > .form > .right > textarea {
-  height: 140px;
+#part-8 > .form > .right > div[data-label]::before {
+  content: attr(data-label);
+  position: absolute;
+  color: #000;
+  font-size: 13px;
+  font-family: serif;
+  line-height: 36px;
+  text-indent: 14px;
+  pointer-events: none;
+}
+#part-8 > .form > .right > div[data-label].textarea {
   width: calc(100% - 25px);
+}
+#part-8 > .form > .right > div[data-label].textarea::before {
+
+}
+#part-8 > .form > .right > div[data-label] > textarea {
+  height: 140px;
+  width: 100%;
   box-sizing: border-box;
-  margin: 5px;
-  padding: 10px;
+  margin: 0;
   border: none;
+  text-indent: 156px;
+  padding-left: 14px;
+  line-height: 20px;
+  padding-top: 9px;
   background: #eee;
   resize: none;
 }
@@ -705,7 +735,7 @@ div.flexbox {
   user-select: none;
 }
 #bottombar {
-  height: 600px;
+  height: 560px;
   background: #334;
   color: white;
 }

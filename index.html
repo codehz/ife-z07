@@ -177,11 +177,11 @@
           </div>
         </div>
         <div class="right">
-          <input type="text" name="name" placeholder="姓名:">
-          <input type="text" name="age" placeholder="年龄:">
-          <input type="text" name="contact" placeholder="联系方式:">
-          <input type="text" name="address" placeholder="联系地址:">
-          <textarea name="description" placeholder="请简单描述您梦想的生活:"></textarea>
+          <div data-label="姓名:"><input type="text" name="name" autocomplete="name" mozactionhint="next"=></div>
+          <div data-label="年龄:"><input type="text" name="age" mozactionhint="next"=></div>
+          <div data-label="联系方式:"><input type="text" name="contact" autocomplete="tel" mozactionhint="next"=></div>
+          <div data-label="联系地址:"><input type="text" name="address" autocomplete="street-address" mozactionhint="next"></div>
+          <div data-label="请简单描述您梦想的生活:" class="textarea" title="没有js的情况下，高度尚不能自动扩展"><textarea name="description"></textarea></div>
           <div class="submit">提交申请</div>
         </div>
       </div>
