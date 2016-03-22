@@ -137,7 +137,7 @@ div.fill {
   line-height: 46px;
 }
 #topbar a.login {
-  display:inline-block;
+  display: inline-block;
   text-decoration: none;
   line-height: 50px;
   color: #ec0000;
@@ -678,8 +678,13 @@ div.fill {
   display: block;
   color: #aaa;
   font-family: serif;
+  line-height: 17px;
   height: 34px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 #part-8 > .form > .left > div::after {
   position: absolute;
