@@ -15,7 +15,7 @@ div.fill {
   -webkit-flex: 1;
   flex: 1;
 }
-div.flexbox {
+.flexbox {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -39,19 +39,24 @@ div.flexbox {
   line-height: 32px;
   color: #aaa;
 }
-.select > div.option {
+.select > ul.option {
   display: none;
+  list-style-type: none;
+  max-height: 180px;
+  overflow-y: auto;
 }
 .select:focus {
   outline: none;
   border: #c00 solid 2px;
 }
-.select:focus > div.option {
+.select:focus > ul.option {
   display: block;
   position: absolute;
   top: 32px;
   left: -2px;
   right: -2px;
+  margin: 0;
+  padding: 0;
   background: white;
   border: #c00 solid 2px;
   box-sizing: border-box;
@@ -59,19 +64,19 @@ div.flexbox {
   z-index: 2;
   cursor: pointer;
 }
-.select:focus > div.option > div {
+.select:focus > ul.option > li {
   padding-left: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.select:focus > div.option > div:last-of-type {
+.select:focus > ul.option > li:last-of-type {
   padding-bottom: 15px;
 }
-.select:focus > div.option > div[selected] {
+.select:focus > ul.option > li[selected] {
   background: url(image/selected.png) left 10px center no-repeat, #c00;
   color: white;
 }
-.select:focus > div.option > div:hover {
+.select:focus > ul.option > li:hover {
   background: #c00;
   color: white;
 }
@@ -109,19 +114,32 @@ div.flexbox {
   padding-left: 10px;
   font-size: 20px;
 }
-#topbar div.tab {
+#topbar > ul {
+  height: 54px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#topbar li.tab {
+  display: inline-block;
   font-size: 14px;
   padding: 0 20px;
+  line-height: 55px;
+  box-sizing: content-box;
   color: #999;
   cursor: pointer;
   transition: all 0.3s;
   border-bottom: 0px solid #ec0000;
 }
-#topbar div.selected, #topbar div.tab:hover {
+#topbar li.selected, #topbar li.tab:hover {
   color: #ec0000;
   border-bottom: 5px solid #ec0000;
+  line-height: 46px;
 }
-#topbar div.login {
+#topbar a.login {
+  display:inline-block;
+  text-decoration: none;
+  line-height: 50px;
   color: #ec0000;
   padding: 0 20px;
   margin-right: 50px;
@@ -171,7 +189,9 @@ div.flexbox {
   font-size: 24px;
   line-height: 36px;
 }
-#part-1 div.button {
+#part-1 a.button {
+  display: block;
+  text-decoration: none;
   width: 340px;
   height: 60px;
   margin-top: 80px;
@@ -183,7 +203,7 @@ div.flexbox {
   cursor: pointer;
   transition: all 0.2s;
 }
-#part-1 div.button:hover {
+#part-1 a.button:hover {
   background-color: #de5f5f;
 }
 @media (min-width: 2400px) {
@@ -259,6 +279,7 @@ div.flexbox {
 #part-4 {
   position: relative;
   height: 380px;
+  padding-bottom: 50px;
 }
 #part-4 div.background {
   position: absolute;
@@ -318,13 +339,14 @@ div.flexbox {
   justify-content: space-around;
   z-index: 1;
 }
-#part-4 div.select-area > div {
+#part-4 div.select-area > * {
   flex: 1 1;
   margin: 0 20px;
   max-width: 300px;
   height: 36px;
 }
-#part-4 div.select-area div.button {
+#part-4 div.select-area a.button {
+  display: inline-block;
   background: #c00;
   text-align: center;
   line-height: 36px;
@@ -336,7 +358,7 @@ div.flexbox {
   user-select: none;
   transition: all ease .3s;
 }
-#part-4 div.select-area div.button:hover {
+#part-4 div.select-area a.button:hover {
   background: #c33;
 }
 #part-5 {
@@ -474,6 +496,7 @@ div.flexbox {
   box-sizing: border-box;
   margin-top: 50px;
   font-size: 14px;
+  text-decoration: none;
   padding: 7px 23px;
   color: #c00;
   border: 2px solid #c00;
@@ -537,7 +560,8 @@ div.flexbox {
   margin-left: -40px;
   width: 80px;
 }
-#part-7 > div.text > div.button {
+#part-7 > div.text > .button {
+  text-decoration: none;
   padding: 10px 30px;
   border: 1px solid #c00;
   color: #c00;
@@ -545,7 +569,7 @@ div.flexbox {
   transition: all ease .3s;
   cursor: pointer;
 }
-#part-7 > div.text > div.button:hover {
+#part-7 > div.text > .button:hover {
   background: #f55;
   border: 1px solid #f55;
   color: white;
@@ -557,12 +581,12 @@ div.flexbox {
 #part-7 > div.text.red > span.subtitle::after {
   border-bottom: 2px solid #fff;
 }
-#part-7 > div.text.red > div.button {
+#part-7 > div.text.red > .button {
   background: #f55;
   border: 1px solid white;
   color: white;
 }
-#part-7 > div.text.red > div.button:hover {
+#part-7 > div.text.red > .button:hover {
   background: white;
   border: 1px solid white;
   color: #f55;
@@ -706,9 +730,7 @@ div.flexbox {
 #part-8 > .form > .right > div[data-label].textarea {
   width: calc(100% - 25px);
 }
-#part-8 > .form > .right > div[data-label].textarea::before {
-
-}
+#part-8 > .form > .right > div[data-label].textarea::before {}
 #part-8 > .form > .right > div[data-label] > textarea {
   height: 140px;
   width: 100%;
@@ -733,6 +755,7 @@ div.flexbox {
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
+  border: none;
 }
 #bottombar {
   height: 560px;

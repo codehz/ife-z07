@@ -1,0 +1,176 @@
+doctype html
+html(lang=cn)
+  head
+    title=新世界
+    link(rel="stylesheet", href="style.css")
+  body
+    nav#topbar
+      img.logo(src="image/books.png" alt="banner")
+      span.title 新世界
+      .fill
+      ul
+        li.tab.selected 首页
+        li.tab 最新活动
+        li.tab 项目介绍
+        li.tab 爱心社区
+        li.tab 关于我们
+      a.login(tabindex=0, href="#")
+        img.img(src="image/login.png", alt="login icon")
+        | 登陆
+    section#part-1.noselect
+      .background
+      .content
+        span.title Time of new life
+        .text
+          | 新时代年轻的人们让我们一起
+          br
+          | 体验新生活，享受新生活
+        a.button(tabindex=0, href="#") 开始体验
+    div
+      section#part-2.noselect
+        ul
+          li
+            img(src="image/icon0.png", alt="round")
+            span 打造全新世界观，让你更爱你的生活
+          li
+            img(src="image/icon1.png", alt="flag")
+            span 丰富多彩的公益活动，发挥新世界的主人公意识
+          li
+            img(src="image/icon2.png", alt="round")
+            span 时尚的新理念，超前体验未知的生活
+          li
+            img(src="image/icon3.png", alt="round")
+            span 完善的培养机制，培养你全新的世界观
+      section#part-3.flexbox.noselect
+        img(src="image/books.png", alt="books")
+        span 关于新世界，你不知道的还有什么？
+      section#part-4.flexbox
+        .background
+        .content.flexbox.noselect
+          span.title 查找新世界城市活动信息
+          span.description 每个城市都有不同的活动信息，请自主查询你所需要了解的城市
+        .select-area
+          .select(selected="中国", tabindex=0)
+            ul.option
+              li 中国
+              li 其他国家
+          .select(selected="省份", tabindex=0)
+            ul.option
+              li(selected) 北京市
+              li 天津市
+              li 河北省
+              li 陕西省
+              li 内蒙古自治区
+              li 辽宁省
+          .select(selected="城市", tabindex="0")
+            ul.option
+              li 需要JavaScript才可以显示
+              li 所以现在留空吧
+          a.button(tabindex=0) 搜索
+      section#part-5.noselect
+        div
+          img(src="image/pic0.png", alt="Activity in Beijing")
+          .text
+            span.title 北京活动
+            span.description 新社区大联盟
+        div.highlight
+          img(src="image/pic1.png", alt="Activity in Shanghai")
+          .text
+            span.title 上海活动
+            span.description 夜上海新景观探索
+        div
+          img(src="image/pic2.png", alt="Activity in Shengzhen")
+          .text
+            span.title 深圳活动
+            span.description 深圳活动
+        div
+          img(src="image/pic3.png", alt="Activity in Hongkong")
+          .text
+            span.title 香港活动
+            span.description 奢侈消费大派送
+      section#part-6
+        .img
+          span.title 新世界
+          span.subtitle TIME
+          span.description
+            | @新世界 - 北京
+            br
+            | 2016.04.01
+        .content.noselect
+          span.title(data-num="01") 新世界
+          span.description
+            | 新世界是个新世界新世界是个新世界新世界是个新世界
+            wbr
+            | 新世界是个新世界新世界是个新世界新世界是个新世界
+            wbr
+            | 新世界是个新世界新世界是个新世界新世界是个新世界
+            wbr
+            | 新世界是个新世界新世界是个新世界
+          a.button 更多详情
+          .tab
+            div.actived
+            div
+            div
+      section#part-7
+        .text.red.noselect
+          span.title 新时代
+          span.subtitle 关于爱生活的我们
+          a.button(tabindex=0, href="#") 查看更多
+        .text.noselect
+          span.title 新时代
+          span.subtitle 关于爱生活的我们
+          a.button(tabindex=0, href="#") 查看更多
+        .img
+      section#part-8
+        .head.flexbox.noselect
+          span.title 成为我们的志愿者
+          span.description
+            | 新世界的大家庭需要每一个爱生活的人加入,如果你够年轻,有梦想,有激情
+            | 那就不要犹豫,快来加入我们,成为改变所有人生活的人
+        .form.noselect
+          .left
+            div
+              span.title 新世界志愿者协议
+              span.detail
+                | 加入新世界志愿者的人员必须遵守中华人民共共和国的
+                | 相关法律法规，并且本着平等资源的原则加入新世界志愿者的人员必须遵守中华人民共共和国的
+                | 相关法律法规，并且本着平等资源的原则
+            div
+              span.title 新世界志愿者权利
+              span.detail
+                | 新世界志愿者享受新世界内部所有资源共享的权利，并
+                | 且享受所在地新世界活动的优先参与资格 新世界志愿者享受新世界内部所有资源共享的权利，并
+                | 且享受所在地新世界活动的优先参与资格
+            div
+              span.title 更多条款
+          form.right
+            div(data-label="姓名:")
+              input(type="text", name="name", autocomplete="name", mozactionhint="next")
+            div(data-label="年龄:")
+              input(type="text" name="age" mozactionhint="next")
+            div(data-label="联系方式:")
+              input(type="text" name="contact" autocomplete="tel" mozactionhint="next")
+            div(data-label="联系地址:")
+              input(type="text" name="contact" autocomplete="street-address" mozactionhint="next")
+            div.textarea(data-label="请简单描述您梦想的生活:", title="没有js的情况下，高度尚不能自动扩展")
+              textarea(name="description")
+            input.submit(type="submit", value="提交申请")
+      footer#bottombar.flexbox
+        .content.flexbox
+          span.title 联系我们
+          span.description 为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯也可以通过以下任何方式关注我们动态
+          form.subscription
+            input(type="email" name="email" placeholder="someone@email.com")
+            button 提交
+          .social
+            a(href="#")
+              img(src="image/s0.png", alt="qq")
+            a(href="#")
+              img(src="image/s1.png", alt="sina")
+            a(href="#")
+              img(src="image/s2.png", alt="twitter")
+            a(href="#")
+              img(src="image/s3.png", alt="un")
+        .dockbar
+          span.copyright &copy; 2016 新世界
+          a.top(href="#") Back to top
