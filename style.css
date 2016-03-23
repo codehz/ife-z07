@@ -9,7 +9,7 @@ div, span {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: "微软雅黑", sans-serif;
+  font-family: "Microsoft YaHei", sans-serif;
 }
 div.fill {
   -webkit-flex: 1;
