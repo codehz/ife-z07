@@ -489,8 +489,8 @@ div.fill {
   text-align: justify;
   line-height: 36px;
   color: #ccc;
-  font-size: 13px;
-  font-family: "楷体", serif;
+  font-size: 12px;
+  font-family: "宋体", serif;
 }
 #part-6 > div.content > .button {
   box-sizing: border-box;
@@ -606,11 +606,11 @@ div.fill {
   content: '';
   background: url(image/img03.jpg) right center no-repeat;
   background-size: cover;
-  -webkit-filter: brightness(0.8);
-  -moz-filter: brightness(0.8);
-  -o-filter: brightness(0.8);
-  -ms-filter: brightness(0.8);
-  filter: brightness(0.8);
+  -webkit-filter: brightness(0.7);
+  -moz-filter: brightness(0.7);
+  -o-filter: brightness(0.7);
+  -ms-filter: brightness(0.7);
+  filter: brightness(0.7);
 }
 #part-7 > div.img::after {
   position: absolute;
