@@ -95,6 +95,7 @@ div.fill {
   display: flex;
   min-width: 800px;
   z-index: 5;
+  font-family: "Microsoft YaHei";
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 #topbar+section {
@@ -144,7 +145,8 @@ div.fill {
   padding: 0 20px;
   margin-right: 50px;
 }
-#topbar div.login img {
+#topbar a.login img {
+  position: relative;
   height: 17px;
   width: 14px;
   padding-right: 2px;
